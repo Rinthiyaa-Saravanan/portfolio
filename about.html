@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  nav {
+    
+            width: 100%;
+            background: #1e1e1e;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background: #ff6347;
+            border-radius: 5px;
+        }
+
+
+    
+
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.7);
+  }
+  95% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes reveal-info {
+  0% {
+    height: 0;
+  }
+  5% {
+    height: 350px;
+  }
+  95% {
+    height: 350px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+
+body {
+background-color: rgb(63, 56, 56);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  height: 700px;
+  background-color: #c0bbb9;
+  font-size: 14px;
+  font-family: "Montserrat", sans;
+  .container-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    animation: fade-in 1.5s ease, slide-in 1.2s ease;
+    -webkit-animation: fade-in 1.5s ease, slide-in 1.2s ease;
+    .main-content {
+      flex-basis: 50%;
+      order: 1;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      .main-headings {
+        width: 100%;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        animation: scaleDown 6s ease 2s;
+        -webkit-animation: scaleDown 6s ease 2s;
+        #by-line {
+          width: 60%;
+          padding-bottom: 1px;
+          padding-left: 3px;
+          margin-left: 15px;
+          font-size: 85%;
+          border-bottom: 1px solid #757575;
+          font-style: italic;
+        }
+        .heading {
+          align-self: flex-end;
+          margin-top: 20px;
+          margin-left: 80px;
+          #heading1,
+          #heading2,
+          #heading3 {
+            margin: 0;
+            margin-top: -20px;
+          }
+          #heading1,
+          #heading2 {
+            font-size: 500%;
+            font-weight: normal;
+            letter-spacing: -2px;
+          }
+          #heading1 {
+            margin-left: 50px;
+          }
+          #heading2 {
+            margin-left: 150px;
+          }
+          #heading3 {
+            margin-top: -52px;
+            font-size: 900%;
+            font-weight: 800;
+            letter-spacing: 2px;
+          }
+        }
+        .short-bio {
+          width: 60%;
+          margin-top: -30px;
+          margin-left: 90px;
+          font-style: italic;
+          font-size: 105%;
+        }
+        a {
+           width: 72%;
+          margin-left: 92px;
+           margin-right: auto;
+          align-self: flex-start;
+          font-weight: bold;
+          font-size: 120%;
+          font-family: helvetica;
+          text-decoration: none;
+          color: black;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .more-info {
+        margin-top: -70px;
+        width: 50%;
+        height: 0;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: flex-start;
+        overflow: hidden;
+        animation: reveal-info 4s ease 3s;
+        -webkit-animation: reveal-info 4s ease 3s;
+      }
+    }
+    .image-wrapper {
+      flex-basis: 50%;
+      order: 2;
+      background-color: #8D6E63;
+      .image-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+   
+    </style>
+<body>
+  <nav>
+    <ul>
+        <li><a href="index.html" onclick="navigate('home')">Home</a></li>
+        <li><a href="about.html." onclick="navigate('about')">About Me</a></li>
+        <li><a href="skills.html" onclick="navigate('skills')">Skills</a></li>
+        <li><a href="contact.html" onclick="navigate('contact')">Contact Me</a></li>
+    </ul>
+</nav>
+    <div class="container">
+        <div class="container-inner">
+          <div class="main-content">
+            <div class="main-headings" id="main-headings-js">
+            <p id="by-line">"With love and passion, welcome to my creative world! ❤️✨"</p>
+      
+            <div class="heading">
+              <h3 id="heading1">Rinthiyaa</h3>
+              <h3 id="heading2">Saravanan</h3>
+              <h1 id="heading3">Personally</h1>
+            </div>
+      
+            <div class="short-bio">
+              <p>I am a curious, creative, and determined individual who loves solving problems and exploring new ideas. With a passion for learning, coding, and design, I embrace challenges with a positive mindset. I believe in hard work, innovation, and continuous growth, always striving to improve and make meaningful contributions. 🚀</p>
+         
+            </div>
+      
+            <a href="#" class="link" onclick="readMore()">Read More</a>
+            </div>
+            
+            <div class="more-info " id="more-info-js">
+              
+              <h4>Hello</h4>
+              <p>I’m Rinthiyaa Saravanan, a 2nd-year Electronics and Communication Engineering (ECE) student at Sri Krishna College. Passionate about coding, designing, and problem-solving, I love turning ideas into reality through logic and creativity</p>
+              
+              <p>From programming and circuit design to innovative problem-solving, I enjoy exploring the intersection of electronics and software to build smart solutions. Whether it’s writing efficient code, crafting user-friendly designs, or mastering new technologies, I believe in continuous learning and growth.</p>
+              
+              <p>Feel free to explore my work, and let’s connect to create something amazing together! 🚀</p>
+            </div>
+            
+          </div>
+      
+          <div class="image-wrapper">
+          <div class="image-container">
+            <img class="imges" src="img.png">
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <script>
+        function readMore() {
+  var expandInfo = document.getElementById("more-info-js");
+  var mainHeadings = document.getElementById("main-headings-js");
+  
+  mainHeadings.style.transform = "scale(0.7)";
+  expandInfo.style.height = "350px";
+} 
+      </script>
+    
+</body>
+</html>

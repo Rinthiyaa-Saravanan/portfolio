@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    background-color: #8D6E63;
+}
+
+.container {
+    width: 50%;
+    padding-left: 10%;
+     justify-content: center;
+     color: #8D6E63;
+}
+
+@keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+@-webkit-keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+@-moz-keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+@-o-keyframes load {
+    from {
+        width: 0%
+    }
+}
+
+.bar {
+    background-color: #EEE;
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #040404;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bar::before {
+    content: attr(data-skill);
+    background-color: #f3b0ff;
+    display: inline-block;
+    padding: 25px  1px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+}
+
+.bar.front::before {
+    background-color: #ffcc33;
+}
+
+.bar.back::before {
+    background-color: #a6cfe3;
+}
+
+.bar.learning::before {
+    width: calc(20% - 10px);
+}
+
+.bar.basic::before {
+    width: calc(40% - 10px);
+}
+
+.bar.intermediate::before {
+    width: calc(60% - 10px);
+}
+
+.bar.advanced::before {
+    width: calc(80% - 10px);
+}
+
+.bar.expert::before {
+    width: calc(100% - 10px);
+}
+nav {
+            width: 100%;
+            background: #1e1e1e;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background: #ff6347;
+            border-radius: 5px;
+        }
+        .cont
+        {
+            justify-content:space-around;
+        }
+        .img
+        {
+            right: 0;
+            color: #8D6E63;
+        }
+        .container
+        {
+            left: 0;
+        }
+        .spl
+        {
+            height: 10%;
+            width: 40%;
+            position: fixed;
+          padding-top: 20px;
+        }
+
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" onclick="navigate('home')">Home</a></li>
+            <li><a href="about.html" onclick="navigate('about')">About Me</a></li>
+            <li><a href="skills.html" onclick="navigate('skills')">Skills</a></li>
+            <li><a href="contact.html" onclick="navigate('contact')">Contact Me</a></li>
+        </ul>
+    </nav>
+        
+        <div class="spl container">
+            <h1>Skill Set</h1>
+            <div class="bar learning" 
+            data-skill="TDD"></div>
+            <p>.</p>
+            <div class="bar back basic" 
+            data-skill="Python"></div>
+            <p>.</p>
+            <div class="bar back intermediate" 
+            data-skill="C#"></div>
+            <p>.</p>
+            <div class="bar front advanced" 
+            data-skill="CSS3"></div>
+            <p>.</p>
+            <div class="bar front expert" 
+            data-skill="HTML5"></div>
+        </div>
+        <div class=" spl img">
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <img src="https://www.honorsociety.org/sites/default/files/styles/large/public/loadimage-1_8.jpg?itok=nnY-IvHu">
+        </div>
+    
+    
+</body>
+</html>
